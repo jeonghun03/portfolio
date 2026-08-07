@@ -1,0 +1,32 @@
+{
+  "school": [
+    {
+      "id": "coming-soon-school-1",
+      "title": "Coming Soon",
+      "category": "학교 프로젝트",
+      "summary": "진행 중인 프로젝트를 정리해서 곧 공개합니다.",
+      "date": "예정",
+      "status": "soon"
+    }
+  ],
+  "personal": [
+    {
+      "id": "coming-soon-personal-1",
+      "title": "Coming Soon",
+      "category": "개인 프로젝트",
+      "summary": "진행 중인 프로젝트를 정리해서 곧 공개합니다.",
+      "date": "예정",
+      "status": "soon"
+    }
+  ],
+  "lab": [
+    {
+      "id": "coming-soon-lab-1",
+      "title": "Coming Soon",
+      "category": "연구실 프로젝트",
+      "summary": "진행 중인 프로젝트를 정리해서 곧 공개합니다.",
+      "date": "예정",
+      "status": "soon"
+    }
+  ]
+}

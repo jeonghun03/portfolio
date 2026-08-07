@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>프로젝트 — 양정훈</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">양정훈</a>
+    <nav class="nav-links">
+      <a href="about.html">자기소개</a>
+      <div class="has-dropdown">
+        <a href="project.html">프로젝트 <span class="caret"></span></a>
+        <div class="dropdown">
+          <a href="project.html?cat=school">학교 프로젝트</a>
+          <a href="project.html?cat=personal">개인 프로젝트</a>
+          <a href="project.html?cat=lab">연구실 프로젝트</a>
+        </div>
+      </div>
+      <a href="skill.html">기술 스택</a>
+      <a href="awards.html">수상 &amp; 자격증</a>
+      <a href="contact.html">연락처</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="다크모드 전환"></button>
+      <button class="menu-btn" aria-label="메뉴 열기">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-head wrap">
+    <div class="eyebrow reveal">Projects</div>
+    <h1 class="reveal">프로젝트</h1>
+    <p class="reveal">학교 수업에서 진행한 프로젝트와 개인적으로 진행한 프로젝트를 기록합니다.</p>
+  </section>
+
+  <section class="wrap">
+    <div class="tabs reveal">
+      <button class="tab active" data-cat="all">전체</button>
+      <button class="tab" data-cat="school">학교 프로젝트</button>
+      <button class="tab" data-cat="personal">개인 프로젝트</button>
+      <button class="tab" data-cat="lab">연구실 프로젝트</button>
+    </div>
+    <div class="grid" id="projectGrid"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span class="fname">양정훈</span>
+    <p>© 2026 Jeonghun Yang. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+let allProjects = [];
+
+function render(cat){
+  const el = document.getElementById('projectGrid');
+  const items = cat === 'all' ? allProjects : allProjects.filter(p => p.cat === cat);
+  el.innerHTML = items.map(p => `
+    <div class="card reveal ${p.status==='soon' ? 'soon' : ''}">
+      <span class="tag">${p.category}</span>
+      <h3>${p.title}</h3>
+      <p>${p.summary}</p>
+      <div class="meta">${p.date}</div>
+    </div>
+  `).join('') || '<p style="color:var(--ink-soft);">아직 등록된 프로젝트가 없습니다.</p>';
+  initReveal();
+}
+
+fetch('data/projects.json').then(r=>r.json()).then(data=>{
+  allProjects = [
+    ...data.school.map(p=>({...p, cat:'school'})),
+    ...data.personal.map(p=>({...p, cat:'personal'})),
+    ...data.lab.map(p=>({...p, cat:'lab'}))
+  ];
+  const params = new URLSearchParams(location.search);
+  const initCat = params.get('cat') || 'all';
+  document.querySelectorAll('.tab').forEach(t=>{
+    t.classList.toggle('active', t.dataset.cat === initCat);
+  });
+  render(initCat);
+});
+
+document.querySelectorAll('.tab').forEach(tab=>{
+  tab.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    render(tab.dataset.cat);
+  });
+});
+</script>
+</body>
+</html>

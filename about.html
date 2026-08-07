@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>자기소개 — 양정훈</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">양정훈</a>
+    <nav class="nav-links">
+      <a href="about.html">자기소개</a>
+      <div class="has-dropdown">
+        <a href="project.html">프로젝트 <span class="caret"></span></a>
+        <div class="dropdown">
+          <a href="project.html?cat=school">학교 프로젝트</a>
+          <a href="project.html?cat=personal">개인 프로젝트</a>
+          <a href="project.html?cat=lab">연구실 프로젝트</a>
+        </div>
+      </div>
+      <a href="skill.html">기술 스택</a>
+      <a href="awards.html">수상 &amp; 자격증</a>
+      <a href="contact.html">연락처</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="다크모드 전환"></button>
+      <button class="menu-btn" aria-label="메뉴 열기">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-head wrap">
+    <div class="eyebrow reveal">About</div>
+    <h1 class="reveal">자기소개</h1>
+    <p class="reveal" style="max-width:none;white-space:nowrap;">산업정보시스템공학과, 학부연구생으로서 연구실에 소속되어 실제 연구와 프로젝트를 수행하고 있습니다.</p>
+  </section>
+
+  <section class="wrap about-top">
+    <div class="avatar reveal">프로필 사진<br>(추후 업로드)</div>
+    <div class="about-body reveal">
+      <h3>소속</h3>
+      <p>전북대학교 산업정보시스템공학과 · 학부연구생<br>교내 연구실 소속으로 데이터 분석 및 최적화 관련 연구를 진행하고 있습니다.</p>
+
+      <h3 style="margin-top:36px;">소개</h3>
+      <p>
+        생산·물류 시스템의 데이터 기반 최적화와 머신러닝을 활용한 공정 개선에 관심을 가지고 연구하고 있습니다.<br><br>
+        기계시스템 고장 예지 연구실 소속으로 프로젝트에 참여하고 있습니다.
+      </p>
+
+      <div class="icon-row">
+        <a href="https://github.com/" target="_blank" rel="noopener" title="GitHub">GH</a>
+        <a href="mailto:jeonghunyang0515@gmail.com" title="Email">@</a>
+      </div>
+
+      <a href="#" class="btn" style="margin-top:32px;" id="resumeBtn2">이력서 PDF 다운로드</a>
+    </div>
+  </section>
+
+  <section class="wrap tight">
+    <div class="section-head reveal">
+      <div>
+        <h2>학력</h2>
+        <p>입학부터 현재까지의 타임라인입니다.</p>
+      </div>
+    </div>
+    <div class="timeline reveal">
+      <div class="item">
+        <div class="date">진행중</div>
+        <h4>전북대학교 산업정보시스템공학과</h4>
+        <p>학부연구생으로 연구실 활동 병행 중</p>
+      </div>
+      <div class="item">
+        <div class="date">2022. 03</div>
+        <h4>전북대학교 산업정보시스템공학과 입학</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap tight">
+    <div class="section-head reveal">
+      <div>
+        <h2>연구 활동 타임라인</h2>
+        <p>연구실 소속 이후 다뤄온 연구 주제를 시간순으로 정리합니다.</p>
+      </div>
+    </div>
+    <div class="timeline reveal">
+      <div class="item">
+        <div class="date">준비중</div>
+        <h4>연구 주제가 추가될 예정입니다</h4>
+        <p>랩미팅과 프로젝트 진행 상황에 맞춰 이 섹션을 계속 업데이트할 예정입니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap tight">
+    <div class="section-head reveal">
+      <div>
+        <h2>약력</h2>
+        <p>주요 경력 및 이력입니다.</p>
+      </div>
+    </div>
+    <div class="timeline reveal">
+      <div class="item">
+        <div class="date">2024. 07 – 2025. 01</div>
+        <h4>구보다 (KUBOTA) · 부품팀 계약직</h4>
+        <p>부품팀에서 계약직으로 근무했습니다.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span class="fname">양정훈</span>
+    <p>© 2026 Jeonghun Yang. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+document.getElementById('resumeBtn2').addEventListener('click', (e)=>{
+  e.preventDefault();
+  alert('이력서 PDF는 준비 중입니다. 곧 업로드될 예정입니다.');
+});
+</script>
+</body>
+</html>

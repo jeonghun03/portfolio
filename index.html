@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>양정훈 — 산업정보시스템공학</title>
+<meta name="description" content="산업정보시스템공학 학부연구생 양정훈의 포트폴리오. 데이터로 문제를 해결합니다.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">양정훈</a>
+    <nav class="nav-links">
+      <a href="about.html">자기소개</a>
+      <div class="has-dropdown">
+        <a href="project.html">프로젝트 <span class="caret"></span></a>
+        <div class="dropdown">
+          <a href="project.html?cat=school">학교 프로젝트</a>
+          <a href="project.html?cat=personal">개인 프로젝트</a>
+          <a href="project.html?cat=lab">연구실 프로젝트</a>
+        </div>
+      </div>
+      <a href="skill.html">기술 스택</a>
+      <a href="awards.html">수상 &amp; 자격증</a>
+      <a href="contact.html">연락처</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="다크모드 전환"></button>
+      <button class="menu-btn" aria-label="메뉴 열기">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="wrap">
+    <div class="cover-card reveal">
+      <div class="cover-tag">YANG · JEONGHUN</div>
+      <div class="cover-eyebrow">산업정보시스템공학과 · 시스템 고장예지 연구실 학부연구생</div>
+      <h1 class="cover-title">양정훈</h1>
+      <p class="cover-sub">
+        데이터를 통해서 <b>미래를 예측하고 설계하는 연구</b>를 하고 있습니다.
+      </p>
+      <div class="cover-url">jeonghunyang0515@gmail.com · 진행 중인 연구와 프로젝트를 기록하는 공간</div>
+      <div class="cover-actions">
+        <a href="about.html" class="btn btn-dark">자기소개 보기</a>
+        <a href="#" class="btn btn-outline" id="resumeBtn">이력서 다운로드</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap band-dark reveal">
+    <a href="project.html" class="band-dark-item">
+      <span class="num">01</span>
+      <h4>프로젝트</h4>
+      <p>학교·개인 프로젝트 기록</p>
+      <span class="go">보러가기 →</span>
+    </a>
+    <a href="about.html" class="band-dark-item">
+      <span class="num">02</span>
+      <h4>연구 활동</h4>
+      <p>랩실 소속 이후의 연구 기록</p>
+      <span class="go">보러가기 →</span>
+    </a>
+    <a href="awards.html" class="band-dark-item">
+      <span class="num">03</span>
+      <h4>수상 &amp; 자격증</h4>
+      <p>취득·수상 이력 모음</p>
+      <span class="go">보러가기 →</span>
+    </a>
+  </section>
+
+  <section class="wrap band" style="border-radius:28px;">
+    <div class="section-head reveal">
+      <div>
+        <span class="sec-num">I</span>
+        <h2>최근 프로젝트</h2>
+        <p>진행할 때마다 하나씩 채워나가는 기록입니다.</p>
+      </div>
+      <a href="project.html" class="link-more">전체 프로젝트 보기 →</a>
+    </div>
+    <div class="grid" id="homeProjects"></div>
+  </section>
+
+  <section class="wrap split" style="padding:100px 0;">
+    <div class="visual reveal">
+      <div style="aspect-ratio:4/3;border-radius:10px;background:var(--bg-alt2);display:flex;align-items:center;justify-content:center;color:var(--ink-soft);font-size:13px;letter-spacing:.05em;">
+        연구 노트 / 코드 스크린샷<br>(추후 업로드)
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="sec-num">II</span>
+      <div class="eyebrow">Research</div>
+      <h2 style="font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-.01em;margin:16px 0 22px;line-height:1.25;">
+        데이터를 <em class="serif-em">읽는 방법</em>부터<br>다시 설계합니다.
+      </h2>
+      <p style="color:var(--ink-soft);font-size:15.5px;max-width:440px;margin:0 0 28px;">
+        문제를 정의하고, 가설을 세우고, 데이터로 검증하는 과정을 기록으로 남깁니다.
+        연구실에서 다루는 주제와 진행 방식은 자기소개 페이지에서 계속 업데이트됩니다.
+      </p>
+      <a href="about.html" class="link-more">연구 활동 보기 →</a>
+    </div>
+  </section>
+
+  <section class="tight wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="sec-num">III</span>
+        <h2>수상 &amp; 자격증</h2>
+        <p>최근 취득·수상 항목만 먼저 보여드립니다.</p>
+      </div>
+      <a href="awards.html" class="link-more">전체 보기 →</a>
+    </div>
+    <div class="grid cols-2" id="homeAwards"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span class="fname">양정훈</span>
+    <p>© 2026 Jeonghun Yang. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+document.getElementById('resumeBtn').addEventListener('click', (e)=>{
+  e.preventDefault();
+  alert('이력서 PDF는 준비 중입니다. 곧 업로드될 예정입니다.');
+});
+
+fetch('data/projects.json').then(r=>r.json()).then(data=>{
+  const items = [...data.school, ...data.personal, ...data.lab].slice(0,3);
+  const el = document.getElementById('homeProjects');
+  el.innerHTML = items.map(p => `
+    <div class="card reveal ${p.status==='soon' ? 'soon' : ''}">
+      <span class="tag">${p.category}</span>
+      <h3>${p.title}</h3>
+      <p>${p.summary}</p>
+      <div class="meta">${p.date}</div>
+    </div>
+  `).join('');
+  initReveal();
+}).catch(()=>{});
+
+fetch('data/awards.json').then(r=>r.json()).then(data=>{
+  const items = [...data.awards, ...data.certificates].slice(0,2);
+  const el = document.getElementById('homeAwards');
+  el.innerHTML = items.map(a => `
+    <div class="card reveal">
+      <span class="tag">${a.org}</span>
+      <h3>${a.title}</h3>
+      <p>${a.desc}</p>
+      <div class="meta">${a.date}</div>
+    </div>
+  `).join('');
+  initReveal();
+}).catch(()=>{});
+</script>
+</body>
+</html>
